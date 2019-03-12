@@ -12,7 +12,7 @@
     "database": [
         {
             "type": "mongo",
-            "name": "mceeDB",
+            "name": "testDB",
             "url": "mongodb://127.0.0.1:27017/test",
             "base": "test"
         }
