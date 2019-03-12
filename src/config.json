@@ -1,0 +1,20 @@
+{
+    "server": {
+        "port": 3000,
+        "host": "0.0.0.0"
+    },
+    "Logger": {
+        "title": "ts-fastify",
+        "level": "info",
+        "pretty": true,
+        "color": "level"
+    },
+    "database": [
+        {
+            "type": "mongo",
+            "name": "mceeDB",
+            "url": "mongodb://127.0.0.1:27017/test",
+            "base": "test"
+        }
+    ]
+}

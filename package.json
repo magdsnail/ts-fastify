@@ -1,0 +1,25 @@
+{
+  "name": "ts-fastify",
+  "version": "1.0.0",
+  "description": "------- ##### *npm install*   ##### 通过 更改package.json 和 launch.json 可更灵活的调试接口",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node dist/index.js",
+    "build": "tsc"
+  },
+  "author": "magsnail",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/mongodb": "^3.1.22",
+    "@types/node": "^11.10.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "fastify": "^2.0.1",
+    "mongodb": "^3.1.13",
+    "poplar-logger": "^1.1.0"
+  },
+  "keywords": []
+}
