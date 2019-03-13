@@ -7,3 +7,6 @@
 ##### *node dist/index.js*  
 ##### 通过 更改package.json 和 launch.json 可更灵活的调试接口
 #### 测试 http://127.0.0.1:3000  即可
+
+#### 新增对ql支持 
+#### http://127.0.0.1:3000/iql  浏览
