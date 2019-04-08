@@ -2,7 +2,7 @@
 #### usage
 ##### 修改config.json 配置文件 支持多个数据库操作 支持 Full declaration 和 Shorthand declaration Routes形式
 -------
-##### *npm install*  
+##### *cd ts-fastify && npm install*  
 ##### *tsc*  
 ##### *node dist/index.js*  
 ##### 通过 更改package.json 和 launch.json 可更灵活的调试接口
