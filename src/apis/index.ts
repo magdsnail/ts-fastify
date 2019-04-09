@@ -44,7 +44,7 @@ export class Service {
         });
 
         this.server.use(cors());
-
+        this.server.decorate('dbconnects', this.app.connector.connectors);
     }
 
     start() {
