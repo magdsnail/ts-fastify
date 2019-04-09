@@ -3,6 +3,7 @@
 import Logger from '../logger';
 
 import { MongoConnector } from './mongo-connector';
+import { MysqlConnector } from './mysql-connector';
 
 export class DBConnectManager {
     app: any;
@@ -16,9 +17,11 @@ export class DBConnectManager {
     async init() {
         try {
             const opts: any = this.app.config.database;
-            for(let opt of opts) {
-                if(opt.type == 'mongo') {
+            for (let opt of opts) {
+                if (opt.type == 'mongo') {
                     this.connectors[opt.name] = new MongoConnector(opt);
+                } else if (opt.type == 'mysql') {
+                    this.connectors[opt.name] = new MysqlConnector(opt);
                 } else {
                     Logger.warn('database type is not found', opt.name);
                 }
@@ -28,9 +31,9 @@ export class DBConnectManager {
         }
     }
 
-    async start () {
+    async start() {
         try {
-            for(let k in this.connectors) {
+            for (let k in this.connectors) {
                 await this.connectors[k].connect();
             }
         } catch (error) {
@@ -38,9 +41,9 @@ export class DBConnectManager {
         }
     }
 
-    async close () {
+    async close() {
         try {
-            for(let k in this.connectors) {
+            for (let k in this.connectors) {
                 await this.connectors[k].close();
             }
         } catch (error) {

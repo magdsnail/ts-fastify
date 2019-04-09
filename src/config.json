@@ -13,8 +13,19 @@
         {
             "type": "mongo",
             "name": "testDB",
-            "url": "mongodb://127.0.0.1:27017/test",
+            "url": "mongodb://127.0.0.1:27017",
             "base": "test"
+        },
+        {
+            "type": "mysql",
+            "name": "test",
+            "ops": {
+                "host": "127.0.0.1",
+                "port": 3306,
+                "user": "root",
+                "password": "root",
+                "database": "test"
+            }
         }
     ]
 }
